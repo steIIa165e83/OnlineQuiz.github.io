@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Online Quiz System</title>
-  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1> Online Quiz</h1>
 
-  <form>
+  <form id = "join-form">
     <label for="room-code">Room Code</label>
     <input id="room-code" placeholder="Enter room code" required>
 
@@ -19,6 +19,15 @@
     <button type="submit">Join Quiz</button>
     <p id="message"></p>
   </form>
+
+  <section id="lobby" hidden>
+    <h2>Lobby</h2>
+    <p>Room Code: <strong id="lobby-room-code"></strong></p>
+    <p>Nickname: <strong id="lobby-nickname"></strong></p>
+    <p id="room-status">Checking participation status...</p>
+    <p id="lobby-message">Please wait for the instructor to start the quiz.</p>
+    <button type="button" id="leave-button">Leave Room</button>
+  </section>
 
   <script src="app.js"></script>
 </body>
